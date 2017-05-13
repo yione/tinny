@@ -6,20 +6,13 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
-        "infyomlabs/adminlte-templates": "5.3.x-dev",
-        "infyomlabs/core-templates": "dev-master",
-        "infyomlabs/laravel-generator": "5.3.x-dev",
         "laravel/framework": "5.4.*",
-        "laravel/tinker": "~1.0",
-        "laravelcollective/html": "^5.3.0",
-        "mpociot/laravel-apidoc-generator": "^2.0"
+        "laravel/tinker": "~1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~5.7",
-        "symfony/css-selector": "2.8.*|3.0.*",
-        "symfony/dom-crawler": "2.8.*|3.0.*"
+        "phpunit/phpunit": "~5.7"
     },
     "autoload": {
         "classmap": [
@@ -52,6 +45,7 @@
     },
     "config": {
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "optimize-autoloader": true
     }
 }
