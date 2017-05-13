@@ -14,6 +14,20 @@
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
+$app->useEnvironmentPath($app->basePath().'');
+
+$envContent = 'local';
+
+if(file_exists($app->basePath().'/.env')){
+    $envContent = file_get_contents($app->basePath().'/.env');
+    $envContent = trim($envContent);
+}
+
+$envContent = $envContent?:'local';
+
+if(file_exists($app->basePath().'/.env.'.$envContent)){
+    $app->loadEnvironmentFrom('.env.'.$envContent);
+}
 
 /*
 |--------------------------------------------------------------------------
