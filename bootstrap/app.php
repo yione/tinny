@@ -14,18 +14,17 @@
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
-$app->useEnvironmentPath($app->basePath().'');
-
+$app->useEnvironmentPath($app->basePath().'/config');
 $envContent = 'local';
 
-if(file_exists($app->basePath().'/.env')){
-    $envContent = file_get_contents($app->basePath().'/.env');
+if(file_exists($app->basePath().'/config/.env')){
+    $envContent = file_get_contents($app->basePath().'/config/.env');
     $envContent = trim($envContent);
 }
 
 $envContent = $envContent?:'local';
 
-if(file_exists($app->basePath().'/.env.'.$envContent)){
+if(file_exists($app->basePath().'/config/.env.'.$envContent)){
     $app->loadEnvironmentFrom('.env.'.$envContent);
 }
 

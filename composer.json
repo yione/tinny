@@ -6,13 +6,31 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
-        "laravel/framework": "5.4.*",
-        "laravel/tinker": "~1.0"
+        "laravel/framework": "5.3.*",
+        "infyomlabs/laravel-generator": "dev-master",
+        "laravelcollective/html": "5.3.*",
+        "infyomlabs/adminlte-templates": "dev-master",
+        "infyomlabs/swagger-generator": "dev-master",
+        "jlapp/swaggervel": "dev-master",
+        "infyomlabs/generator-builder": "dev-master",
+        "doctrine/dbal": "~2.3",
+        "barryvdh/laravel-debugbar": "^2.2",
+        "guzzlehttp/guzzle": "~6.0",
+        "dompdf/dompdf": "^0.7.0",
+        "maatwebsite/excel": "~2.0.0",
+        "predis/predis": "~1.1@dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~5.7"
+        "phpunit/phpunit": "~4.0",
+        "symfony/css-selector": "2.8.*|3.0.*",
+        "symfony/dom-crawler": "2.8.*|3.0.*",
+        "infyomlabs/laravel-generator": "dev-master",
+        "infyomlabs/core-templates": "dev-master",
+        "laravelcollective/html": "5.3.*",
+        "infyomlabs/swagger-generator": "dev-master",
+        "jlapp/swaggervel": "dev-master"
     },
     "autoload": {
         "classmap": [
@@ -23,9 +41,9 @@
         }
     },
     "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
+        "classmap": [
+            "tests/TestCase.php"
+        ]
     },
     "scripts": {
         "post-root-package-install": [
@@ -45,7 +63,6 @@
     },
     "config": {
         "preferred-install": "dist",
-        "sort-packages": true,
-        "optimize-autoloader": true
+        "sort-packages": true
     }
 }
