@@ -19,15 +19,7 @@ class WechatController extends InfyOmBaseController
         $this->wechatRepository = $wechatRepo;
     }
     public function index(){
-        $config = [
-            // ...
-            'oauth' => [
-                'scopes'   => ['snsapi_userinfo'],
-                'callback' => '/oauth_callback',
-            ],
-            // ..
-        ];
-        $app=new Application($config);
+	dd('hello world');
     }
 
 }
