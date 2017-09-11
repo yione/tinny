@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-dd('hello world');
+    dd('hello world');
 });
 
 Route::get('wechat', 'WechatController@index');

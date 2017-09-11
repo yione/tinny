@@ -22,11 +22,7 @@ class WechatController extends InfyOmBaseController
 
     public function index(WechatRequest $request)
     {
-        $request=$request->indexReq();
-        if(!$request['check']){
-            exit("验证失败");
-        }
-        exit($request['echostr']);
+
     }
 
 
