@@ -3,6 +3,8 @@
 /storage/*.key
 /vendor
 /.idea
+web*
+web-project*/
 Homestead.json
 Homestead.yaml
 .env*
