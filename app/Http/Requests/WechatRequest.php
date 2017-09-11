@@ -6,6 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class WechatRequest extends FormRequest
 {
+    const BLOCK_SIZE=32;
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -50,4 +51,5 @@ class WechatRequest extends FormRequest
         $request['check']=$this->getSHA1($request['timestamp'],$request['nonce'])==$request['signature'];
         return $request;
     }
+
 }
