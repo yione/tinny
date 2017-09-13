@@ -22,7 +22,8 @@ class WechatController extends InfyOmBaseController
 
     public function index(WechatRequest $request)
     {
-        dd($request->indexReq());
+        $req=$request->indexReq();
+        exit($req['echostr']);
     }
 
 
